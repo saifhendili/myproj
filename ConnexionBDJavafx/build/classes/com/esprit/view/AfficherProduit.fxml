@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="532.0" prefWidth="903.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.AfficherProduitController">
+   <children>
+      <Pane layoutY="95.0" prefHeight="11.0" prefWidth="903.0" style="-fx-background-color: BLACK;" />
+      <Text fill="ORANGE" layoutX="89.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Afficher Produit">
+         <font>
+            <Font name="Comic Sans MS" size="27.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableview" layoutX="-1.0" layoutY="174.0" onMouseClicked="#getSlected" prefHeight="357.0" prefWidth="636.0">
+        <columns>
+          <TableColumn fx:id="quan_prod" prefWidth="145.0" text="QUANTITE" />
+          <TableColumn fx:id="desc_prod" prefWidth="169.0" text="DESCRIPTION" />
+            <TableColumn fx:id="id_produit" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+            <TableColumn fx:id="img_produit" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+            <TableColumn fx:id="cat_lab" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" text="cat" />
+        </columns>
+      </TableView>
+      <Pane layoutX="635.0" layoutY="174.0" prefHeight="357.0" prefWidth="267.0">
+         <children>
+            <Button layoutX="34.0" layoutY="249.0" mnemonicParsing="false" onAction="#add_reserv" prefHeight="64.0" prefWidth="219.0" style="-fx-background-color: orange;" text="Reserver Produit" textFill="WHITE" />
+            <ImageView fx:id="image" fitHeight="151.0" fitWidth="219.0" layoutX="34.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <TextField fx:id="text_iddd" layoutX="637.0" layoutY="143.0" prefHeight="11.0" prefWidth="18.0" style="-fx-background-color: black;" />
+      <Pane layoutX="636.0" layoutY="99.0" prefHeight="439.0" prefWidth="26.0" style="-fx-background-color: black;">
+         <children>
+            <TextField fx:id="text_image" layoutX="3.0" layoutY="116.0" prefHeight="11.0" prefWidth="18.0" style="-fx-background-color: black;" />
+            <TextField fx:id="nomde_produit" layoutX="4.0" layoutY="175.0" prefHeight="45.0" prefWidth="0.0" style="-fx-background-color: black;" />
+            <TextField fx:id="cat" layoutX="4.0" layoutY="408.0" prefHeight="31.0" prefWidth="18.0" style="-fx-background-color: black;" />
+         </children></Pane>
+      <FontAwesomeIcon glyphName="BACKWARD" layoutX="43.0" layoutY="151.0" size="3em" wrappingWidth="26.928571701049805" />
+      <Text fx:id="Retour" layoutX="95.0" layoutY="146.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+      <TextField fx:id="search_text" layoutX="310.0" layoutY="128.0" prefHeight="31.0" prefWidth="201.0" promptText="Recherche avec description" />
+      <Button layoutX="530.0" layoutY="128.0" mnemonicParsing="false" onAction="#Search" style="-fx-background-color: orange;" text="Recherche" textFill="WHITE" />
+   </children>
+</AnchorPane>

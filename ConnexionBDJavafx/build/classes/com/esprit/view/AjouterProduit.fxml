@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.AjouterProduitController">
+   <children>
+      <Pane layoutY="78.0" prefHeight="20.0" prefWidth="469.0" style="-fx-background-color: black;" />
+      <Text fill="ORANGE" layoutX="35.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter Produit">
+         <font>
+            <Font name="Comic Sans MS" size="30.0" />
+         </font>
+      </Text>
+      <Pane layoutX="23.0" layoutY="170.0" prefHeight="480.0" prefWidth="434.0" style="-fx-background-color: #cccccc;">
+         <children>
+            <TextField fx:id="Desc_text" layoutX="205.0" layoutY="28.0" style="-fx-background-color: white;" />
+            <TextField fx:id="quan_text" layoutX="205.0" layoutY="82.0" style="-fx-background-color: white;" />
+            <Text fill="WHITE" layoutX="39.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+               <font>
+                  <Font name="Consolas" size="23.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="39.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantité">
+               <font>
+                  <Font name="Consolas" size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="add" layoutX="39.0" layoutY="195.0" mnemonicParsing="false" onAction="#add" prefHeight="56.0" prefWidth="357.0" style="-fx-background-color: orange;" text="Ajouter" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Button>
+            <TextField fx:id="image_text" layoutX="205.0" layoutY="133.0" style="-fx-background-color: white;" />
+            <Text fill="WHITE" layoutX="39.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Image">
+               <font>
+                  <Font name="Consolas" size="23.0" />
+               </font>
+            </Text>
+            <Button fx:id="writeqr" layoutX="39.0" layoutY="280.0" mnemonicParsing="false" onAction="#add" prefHeight="56.0" prefWidth="357.0" style="-fx-background-color: orange;" text="Creer Code qr" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="lireqr" layoutX="39.0" layoutY="358.0" mnemonicParsing="false" onAction="#add" prefHeight="56.0" prefWidth="357.0" style="-fx-background-color: orange;" text="Lire Code qr" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="24.0" />
+               </font>
+            </Button>
+         </children></Pane>
+      <Text layoutX="103.0" layoutY="147.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon glyphName="BACKWARD" layoutX="51.0" layoutY="151.0" size="3em" />
+   </children>
+</AnchorPane>

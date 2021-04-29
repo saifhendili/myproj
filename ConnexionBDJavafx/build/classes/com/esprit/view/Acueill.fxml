@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.AcueillController">
+   <children>
+      <Button fx:id="pub" layoutX="77.0" layoutY="71.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="207.0" style="-fx-background-color: orange;" text="Publication" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="aide" layoutX="77.0" layoutY="178.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="207.0" style="-fx-background-color: orange;" text="Form d'aide" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="MyReservation" layoutX="83.0" layoutY="282.0" mnemonicParsing="false" onAction="#getpdf" prefHeight="72.0" prefWidth="207.0" style="-fx-background-color: orange;" text="My Reservation" textFill="WHITE">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

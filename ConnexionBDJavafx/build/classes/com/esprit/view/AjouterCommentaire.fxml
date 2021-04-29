@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="897.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.AjouterCommentaireController">
+   <children>
+      <Text fill="#ff9900" layoutX="576.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 24; -fx-font-family: Barlow Condensed Thin;" text="Ajouter Commentaire" />
+      <Pane layoutX="-2.0" layoutY="101.0" prefHeight="18.0" prefWidth="907.0" style="-fx-background-color: black;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Pane layoutX="438.0" layoutY="118.0" prefHeight="504.0" prefWidth="471.0" style="-fx-background-color: cccccc;">
+         <children>
+            <TextField fx:id="text_comment" alignment="TOP_LEFT" layoutX="19.0" layoutY="15.0" prefHeight="269.0" prefWidth="396.0" promptText="Ajouter Commentaire" style="-fx-background-color: white;" />
+            <Button fx:id="shareComment" layoutX="63.0" layoutY="321.0" mnemonicParsing="false" onAction="#ajouterComment" prefHeight="57.0" prefWidth="139.0" text="SHARE" />
+            <Button fx:id="cleartextcomment" layoutX="239.0" layoutY="321.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="57.0" prefWidth="146.0" style="-fx-background-color: 33cc33;" text="CLEAR">
+               <font>
+                  <Font name="Comic Sans MS" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="text_id" layoutX="471.0" layoutY="480.0" prefHeight="18.0" prefWidth="0.0" style="-fx-border-color: #ccccc;" />
+         </children>
+      </Pane>
+      <Pane layoutX="424.0" layoutY="110.0" prefHeight="511.0" prefWidth="14.0" style="-fx-background-color: black;" />
+      <TableView fx:id="tablepub" layoutY="119.0" onMouseClicked="#getSelected" prefHeight="504.0" prefWidth="427.0">
+        <columns>
+          <TableColumn fx:id="id_col" maxWidth="11.0" minWidth="0.0" prefWidth="0.0" text="ID" />
+          <TableColumn fx:id="nom_col" prefWidth="75.0" text="NOM" />
+            <TableColumn fx:id="prenom_col" prefWidth="75.0" text="PRENOM" />
+            <TableColumn fx:id="pub_col" prefWidth="276.0" text="PUBLICATION" />
+        </columns>
+      </TableView>
+      <Text layoutX="87.0" layoutY="64.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon glyphName="BACKWARD" layoutX="35.0" layoutY="68.0" size="3em" />
+      <FontAwesomeIcon fill="#ff9900" glyphName="PLUS_SQUARE" layoutX="513.0" layoutY="72.0" size="4em" />
+   </children>
+</AnchorPane>

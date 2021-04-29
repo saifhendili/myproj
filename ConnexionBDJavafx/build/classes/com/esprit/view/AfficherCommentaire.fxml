@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="584.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.AfficherCommentaireController">
+   <children>
+      <Pane layoutY="97.0" prefHeight="16.0" prefWidth="920.0" style="-fx-background-color: black;" />
+      <TableView fx:id="table_pub" layoutX="1.0" layoutY="133.0" onMouseClicked="#getSelected" prefHeight="467.0" prefWidth="484.0">
+        <columns>
+          <TableColumn fx:id="col_idpub" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" text="ID" />
+          <TableColumn fx:id="col_nompub" prefWidth="75.0" text="NOM" />
+            <TableColumn fx:id="col_prenompub" prefWidth="75.0" text="PRENOM" />
+            <TableColumn fx:id="col_pub" prefWidth="258.0" text="PUBLICATION" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table_comm" layoutX="491.0" layoutY="133.0" prefHeight="467.0" prefWidth="429.0">
+        <columns>
+          <TableColumn fx:id="col_idcom" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" text="ID" />
+          <TableColumn fx:id="col_nomcom" prefWidth="75.0" text="NOM" />
+            <TableColumn fx:id="col_prenomcom" prefWidth="75.0" text="PRENOM" />
+            <TableColumn fx:id="col_com" prefWidth="202.0" text="COMMENTAIRE" />
+        </columns>
+      </TableView>
+      <Pane layoutX="2.0" layoutY="110.0" prefHeight="26.0" prefWidth="484.0">
+         <children>
+            <Text layoutX="111.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PUBLICATION">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="484.0" layoutY="113.0" prefHeight="487.0" prefWidth="15.0" style="-fx-background-color: BLACK;">
+         <children>
+            <TextField fx:id="id_textpub" layoutX="-1.0" prefHeight="40.0" prefWidth="0.0" style="-fx-background-color: black;" />
+         </children></Pane>
+      <Text layoutX="618.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMENTAIRE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#ff7700" layoutX="484.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Afficher Commentaire" wrappingWidth="373.93896484375">
+         <font>
+            <Font name="Comic Sans MS" size="29.0" />
+         </font>
+      </Text>
+      <Text layoutX="106.0" layoutY="61.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon glyphName="BACKWARD" layoutX="54.0" layoutY="65.0" size="3em" />
+   </children>
+</AnchorPane>

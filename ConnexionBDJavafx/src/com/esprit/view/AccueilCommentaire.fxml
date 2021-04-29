@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="479.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.esprit.controller.AccueilCommentaireController">
+   <children>
+      <Button fx:id="add_comm" layoutX="86.0" layoutY="195.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="177.0" style="-fx-background-color: ORANGE;" text="Ajouter Commentaire" textFill="WHITE" />
+      <Button fx:id="display_comm" layoutX="86.0" layoutY="300.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="177.0" style="-fx-background-color: orange;" text="Afficher Commentaire" textFill="WHITE" />
+      <Pane layoutY="93.0" prefHeight="13.0" prefWidth="364.0" style="-fx-background-color: black;" />
+      <Text fill="ORANGE" layoutX="58.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commentaire">
+         <font>
+            <Font name="Comic Sans MS" size="25.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon glyphName="BACKWARD" layoutX="33.0" layoutY="168.0" size="3em" wrappingWidth="26.928571701049805" />
+      <Text fx:id="Retour" layoutX="85.0" layoutY="163.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
