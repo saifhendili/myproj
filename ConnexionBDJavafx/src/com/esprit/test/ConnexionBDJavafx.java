@@ -36,9 +36,9 @@ public class ConnexionBDJavafx extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Hello World");
+        this.primaryStage.setTitle("Sahty Tn");
         
-        parentPage = FXMLLoader.load(getClass().getResource("/com/esprit/view/Acueill.fxml"));
+        parentPage = FXMLLoader.load(getClass().getResource("/roua/view/Accueil.fxml"));
         Scene scene = new Scene(parentPage);
         this.primaryStage.setScene(scene);
         this.primaryStage.show();

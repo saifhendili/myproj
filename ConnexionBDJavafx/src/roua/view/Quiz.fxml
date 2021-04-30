@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="roua.view.QuizController">
+   <children>
+      <ImageView fitHeight="349.0" fitWidth="600.0" layoutX="31.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../com/esprit/image/back.jpg" />
+         </image>
+      </ImageView>
+      <Text layoutX="228.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quiz Sahty.tn" wrappingWidth="130.060546875">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text fill="#0d0761" layoutX="26.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quel est le nom courant de la maladie influenza ?" />
+      <CheckBox fx:id="check1" layoutX="32.0" layoutY="95.0" mnemonicParsing="false" text="Angine" />
+      <CheckBox fx:id="check2" layoutX="32.0" layoutY="121.0" mnemonicParsing="false" text="Grippe" />
+      <Text fill="#0d0761" layoutX="26.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le BCG est un vaccin contre :" />
+      <CheckBox fx:id="check4" layoutX="33.0" layoutY="200.0" mnemonicParsing="false" text="Tuberculose" />
+      <CheckBox fx:id="check5" layoutX="33.0" layoutY="228.0" mnemonicParsing="false" text="Tétanos" />
+      <CheckBox fx:id="check3" layoutX="32.0" layoutY="149.0" mnemonicParsing="false" text="Migraine" />
+      <CheckBox fx:id="check6" layoutX="32.0" layoutY="258.0" mnemonicParsing="false" text="Rage " />
+      <Text fill="#0d0761" layoutX="26.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Que signifie le sigle CMU ?" />
+      <CheckBox fx:id="check7" layoutX="33.0" layoutY="310.0" mnemonicParsing="false" text="Centre médicale d'Urgence" />
+      <CheckBox fx:id="check8" layoutX="33.0" layoutY="335.0" mnemonicParsing="false" text="Carte Mutuelle Unique" />
+      <CheckBox fx:id="check9" layoutX="33.0" layoutY="361.0" mnemonicParsing="false" text="Couverture Maladie Universelle" />
+     
+      <Label fx:id="r1" layoutX="283.0" layoutY="95.0" prefHeight="25.0" prefWidth="63.0" />
+      <Label fx:id="r2" layoutX="275.0" layoutY="113.0" prefHeight="25.0" prefWidth="57.0" />
+      <Label fx:id="r3" layoutX="271.0" layoutY="141.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label fx:id="rp" layoutX="423.0" layoutY="122.0" prefHeight="17.0" prefWidth="165.0" />
+      <Label fx:id="r4" layoutX="275.0" layoutY="200.0" prefHeight="17.0" prefWidth="63.0" />
+      <Label fx:id="r5" layoutX="275.0" layoutY="220.0" prefHeight="17.0" prefWidth="68.0" />
+      <Label fx:id="r6" layoutX="271.0" layoutY="241.0" prefHeight="34.0" prefWidth="51.0" />
+      <Label fx:id="rp2" layoutX="402.0" layoutY="212.0" prefHeight="34.0" prefWidth="187.0" />
+      <Label fx:id="rp3" layoutX="383.0" layoutY="293.0" prefHeight="34.0" prefWidth="205.0" />
+      <Label fx:id="r7" layoutX="281.0" layoutY="302.0" prefHeight="25.0" prefWidth="68.0" />
+      <Label fx:id="r8" layoutX="275.0" layoutY="324.0" prefHeight="28.0" prefWidth="68.0" />
+      <Label fx:id="r9" layoutX="248.0" layoutY="350.0" prefHeight="28.0" prefWidth="51.0" />
+      <Button layoutX="521.0" layoutY="316.0" mnemonicParsing="false" onAction="#testQuiz" text="Valider" />
+      <Button fx:id="retour" layoutX="522.0" layoutY="349.0" mnemonicParsing="false" text="Retour" />
+      <ImageView fitHeight="74.0" fitWidth="98.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../com/esprit/image/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

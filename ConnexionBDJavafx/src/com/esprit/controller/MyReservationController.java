@@ -103,7 +103,7 @@ public class MyReservationController implements Initializable {
     @FXML
     private void back(MouseEvent event) {
     }
-private  String[] columns = { "First Name", "Last Name", "Email","produit","desc"};
+private  String[] columns = { "produit","categorie"};
   private List<ReservationAide> contacts = new ArrayList<ReservationAide>();
 
     @FXML
@@ -138,11 +138,11 @@ private  String[] columns = { "First Name", "Last Name", "Email","produit","desc
 
     for (ReservationAide contact : contacts) {
       Row row = sheet.createRow(rowNum++);
-      row.createCell(0).setCellValue(contact.id);
-      row.createCell(1).setCellValue(contact.idPatient);
-      row.createCell(2).setCellValue(contact.idProduit);
-       row.createCell(3).setCellValue(contact.produit);
-        row.createCell(4).setCellValue(contact.desc);
+     // row.createCell(0).setCellValue(contact.id);
+     // row.createCell(1).setCellValue(contact.idPatient);
+     // row.createCell(2).setCellValue(contact.idProduit);
+       row.createCell(0).setCellValue(contact.produit);
+        row.createCell(1).setCellValue(contact.desc);
     
     }
 
@@ -150,9 +150,9 @@ private  String[] columns = { "First Name", "Last Name", "Email","produit","desc
     for (int i = 0; i < columns.length; i++) {
       sheet.autoSizeColumn(i);
     }
-
+String mypa=fielname.getText();
     // Write the output to a file
-    FileOutputStream fileOut = new FileOutputStream("myreserv.xlsx");
+    FileOutputStream fileOut = new FileOutputStream(mypa+"file.xlsx");
     workbook.write(fileOut);
     fileOut.close();
   }

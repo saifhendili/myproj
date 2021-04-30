@@ -21,6 +21,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import nour.view.AcceuilController;
 
 /**
  * FXML Controller class
@@ -80,16 +81,18 @@ public class AccueilPublicationController implements Initializable {
     private void back(MouseEvent event) {
      
 
-           
+    
            try {
-               Parent page3 = FXMLLoader.load(getClass().getResource("/com/esprit/view/Acueill.fxml"));
-               Scene scene = new Scene(page3);
+               Parent page   = FXMLLoader.load(getClass().getResource("/roua/view/Home.fxml"));
+               Scene scene = new Scene(page );
                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                stage.setScene(scene);
                stage.show();
            } catch (IOException ex) {
                Logger.getLogger(AccueilPublicationController.class.getName()).log(Level.SEVERE, null, ex);
            }
+            
+   
         
     
     }

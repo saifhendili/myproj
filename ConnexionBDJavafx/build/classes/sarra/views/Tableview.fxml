@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="436.0" prefWidth="729.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sarra.views.TableviewController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="1.0" prefHeight="439.0" prefWidth="730.0">
+         <children>
+            <ImageView fx:id="bacc" fitHeight="440.0" fitWidth="773.0" layoutX="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../com/esprit/image/back.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutY="31.0" prefHeight="32.0" prefWidth="407.0" style="-fx-background-color: #C5E8FF;">
+               <children>
+                  <Label prefHeight="32.0" prefWidth="314.0" text="   Liste des médicaments " textFill="#bf5d5d">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Button fx:id="ajout" layoutX="138.0" layoutY="390.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="18.0" style="-fx-background-color: #3AB932;" text="+" textFill="WHITE">
+               <font>
+                  <Font size="7.0" />
+               </font>
+            </Button>
+            <Button fx:id="affiche" layoutX="670.0" layoutY="388.0" mnemonicParsing="false" onMouseClicked="#getAffiche" style="-fx-background-color: #FCC468;" />
+            <Button fx:id="modif" layoutX="47.0" layoutY="387.0" mnemonicParsing="false" onAction="#Edit" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #6897FC;" text="Modifier" />
+            <TextField fx:id="nomt" layoutX="193.0" layoutY="400.0" />
+            <TextField fx:id="idt" layoutX="193.0" layoutY="358.0" />
+            <Button fx:id="supp" layoutX="45.0" layoutY="358.0" mnemonicParsing="false" onAction="#delete" prefHeight="31.0" prefWidth="91.0" style="-fx-background-color: #E15E66;" text="Supprimer" />
+            <Button layoutX="571.0" layoutY="35.0" mnemonicParsing="false" onAction="#Search" style="-fx-background-color: #2caeee;" text="rechercher" textFill="#212122" />
+            <TextField fx:id="recherche" layoutX="416.0" layoutY="35.0" promptText="Rechercher" />
+            <Button layoutX="415.0" layoutY="70.0" mnemonicParsing="false" onAction="#tri" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #FCC468;" text="Afficher trie par prix" />
+            <TextField fx:id="text_image" layoutX="277.0" layoutY="170.0" prefHeight="25.0" prefWidth="0.0" />
+            <TableView fx:id="tvmed" layoutX="45.0" layoutY="95.0" onMouseClicked="#getselected" prefHeight="251.0" prefWidth="346.0" style="-fx-background-color: #CACFD2;">
+               <columns>
+                  <TableColumn fx:id="nom" prefWidth="75.0" text="Nom" />
+                  <TableColumn fx:id="desc" prefWidth="154.0" text="Description" />
+                  <TableColumn fx:id="prix" minWidth="0.0" prefWidth="136.0" text="Prix" />
+                  <TableColumn fx:id="qte" minWidth="0.0" prefWidth="66.0" text="Quantite" />
+                  <TableColumn fx:id="img" minWidth="0.0" prefWidth="12.0" text="image" />
+                  <TableColumn fx:id="idphar" minWidth="0.0" prefWidth="0.0" />
+                  <TableColumn fx:id="id" minWidth="0.0" prefWidth="0.0" text="id" />
+               </columns>
+            </TableView>
+            <Button fx:id="refrech" layoutX="647.0" layoutY="35.0" mnemonicParsing="false" style="-fx-background-color: #06c6f2;" text="*" textFill="WHITE" />
+            <Button fx:id="Reserver" layoutX="411.0" layoutY="358.0" mnemonicParsing="false" onAction="#reserver" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #6897FC;" text="Réserver" />
+            <Button fx:id="reservation" layoutX="412.0" layoutY="387.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #FCC468;" text="Mes réservation" />
+            <Button fx:id="notif" layoutX="417.0" layoutY="99.0" mnemonicParsing="false" onAction="#Notify" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #6897FC;" text="Notification" textFill="#613737" />
+           
+            <Button fx:id="retour" layoutX="666.0" layoutY="388.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #B4AEA4;" text="Retour" />
+            <ImageView fx:id="imageview" fitHeight="209.0" fitWidth="287.0" layoutX="391.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

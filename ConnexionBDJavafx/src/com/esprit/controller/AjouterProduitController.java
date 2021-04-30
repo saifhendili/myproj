@@ -195,10 +195,10 @@ public class AjouterProduitController implements Initializable {
     List.add(Desc_text.getText());
     List.add(quan_text.getText());
     List.add(image_text.getText());
-ByteArrayOutputStream out = QRCode.from(Desc_text.getText()+quan_text.getText()+image_text.getText())
+ByteArrayOutputStream out = QRCode.from(Desc_text.getText())
         .to(ImageType.PNG).stream();
 
-String f_name = Desc_text.getText();
+String f_name = image_text.getText();
 String Path_name = "D:\\" ;
 
 FileOutputStream fout = new FileOutputStream(new File(Path_name +(f_name + ".PNG")));

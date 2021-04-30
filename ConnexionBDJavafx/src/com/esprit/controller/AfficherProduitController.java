@@ -7,32 +7,31 @@ package com.esprit.controller;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
+//import java.io.BufferedReader;
+//import java.io.InputStreamReader;
+//import java.io.OutputStreamWriter;
+//import java.net.URL;
+//import java.net.URLConnection;
+//import java.net.URLEncoder;
 import com.esprit.entity.FormAide;
 import com.esprit.entity.ReservationAide;
 import com.esprit.service.FormAideService;
 import com.esprit.service.ReservationAideService;
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import javax.mail.PasswordAuthentication;
+//import java.net.HttpURLConnection;
+//import javax.mail.PasswordAuthentication;
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.Properties;
+//import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+//import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -46,18 +45,18 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-import javax.mail.Authenticator;
+//import javafx.util.Duration;
+//import javax.mail.Authenticator;
 // import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.swing.JOptionPane;
-import org.controlsfx.control.Notifications;
+//import javax.mail.MessagingException;
+//import javax.mail.Session;
+//import javax.mail.Transport;
+//
+//import javax.mail.internet.AddressException;
+//import javax.mail.internet.InternetAddress;
+//import javax.mail.internet.MimeMessage;
+//import javax.swing.JOptionPane;
+//import org.controlsfx.control.Notifications;
 
 /**
  * FXML Controller class
@@ -117,8 +116,18 @@ public class AfficherProduitController implements Initializable {
         }
     }    
 
+    public final String ACCOUNT_SID =
+            "AC7e219a9b33c6786b10d406d6a3857e09";
+    public final String AUTH_TOKEN =
+            "5b98339f681632ecd342d44604650216";
+    private void smstel(){
+   
+};
+    
+    
+    
     @FXML
-    private void add_reserv(ActionEvent event) throws SQLException, MessagingException, Exception {
+    private void add_reserv(ActionEvent event) throws SQLException, Exception {
         
         String id_prod=text_iddd.getText();
          String name=nomde_produit.getText();
@@ -138,23 +147,11 @@ public class AfficherProduitController implements Initializable {
            //    JavaMailUtil.     
                 
                 
-                  Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
-      String y="+21625609526";
-        Message message = Message 
-                .creator(new PhoneNumber("+21625609526"), // to
-                        new PhoneNumber("+16174154338"), // from
-                       "Votre reservation a effectue avec success")
-                .create();
-  System.out.println("sms telephone");
-        System.out.println(message.getSid());
+             
     }
 
     
     
-    public static final String ACCOUNT_SID =
-            "AC7e219a9b33c6786b10d406d6a3857e09";
-    public static final String AUTH_TOKEN =
-            "17005537ea08856951a588a64a65d18b";
     
 //     public static void sendMail(String recepient) throws MessagingException {
 //     
@@ -244,7 +241,7 @@ public class AfficherProduitController implements Initializable {
             try {
             FormAideService pubs=new FormAideService() ;
             
-            // id.setCellValueFactory(new PropertyValueFactory<>("id"));
+            // id.setCellValueFactory(new PropertyValueFactory<>("id"))
             quan_prod.setCellValueFactory(new PropertyValueFactory<>("quantit"));
             desc_prod.setCellValueFactory(new PropertyValueFactory<>("description"));
             id_produit.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -269,6 +266,20 @@ public class AfficherProduitController implements Initializable {
 //            return message;
 //
 //    }
+
+    @FXML
+    private void getsms(ActionEvent event) {
+              Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+      String y="+21625609526";
+        Message message = Message 
+                .creator(new PhoneNumber("+21625609526"), // to
+                        new PhoneNumber("+16174154338"), // from
+                       "Votre reservation a effectue avec success")
+                .create();
+  System.out.println("sms telephone");
+        System.out.println(message.getSid());
+
+    }
     
    
 

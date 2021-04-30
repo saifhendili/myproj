@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="607.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nour.view.ListeVaccinController">
+   <children>
+      <TextField fx:id="textprix" layoutX="651.0" layoutY="195.0" prefHeight="31.0" prefWidth="46.0" />
+      <TableView fx:id="tableview" layoutX="14.0" layoutY="251.0" onMouseClicked="#getselected" prefHeight="200.0" prefWidth="541.0" style="-fx-background-color: #CEFAD4;">
+        <columns>
+          <TableColumn fx:id="nom" prefWidth="60.0" text="nom" />
+          <TableColumn fx:id="id_pharmacie" prefWidth="11.0" text="id_pharmacie" />
+            <TableColumn fx:id="description" prefWidth="145.0" text="description" />
+            <TableColumn fx:id="prix" prefWidth="84.0" text="prix" />
+            <TableColumn fx:id="quantity" prefWidth="75.0" text="quantity" />
+            <TableColumn fx:id="img" prefWidth="75.0" text="img" />
+            <TableColumn fx:id="id" prefWidth="10.0" text="id" />
+        </columns>
+      </TableView>
+      <Label fx:id="liste" layoutX="213.0" layoutY="14.0" prefHeight="72.0" prefWidth="323.0" text="Liste des vaccins" textFill="#20b983">
+         <font>
+            <Font name="Brush Script MT Italic" size="55.0" />
+         </font></Label>
+      <Button fx:id="affiche" layoutX="589.0" layoutY="499.0" mnemonicParsing="false" onMouseClicked="#getAffiche" text="affiche" />
+      <Button fx:id="ajout" layoutX="14.0" layoutY="467.0" mnemonicParsing="false" onAction="#ajoutpan" prefHeight="47.0" prefWidth="178.0" style="-fx-background-color: F968DF;" text="ajouter vaccin" />
+      <TextField fx:id="filtre" layoutX="196.0" layoutY="195.0" onAction="#readmy" prefHeight="25.0" prefWidth="178.0" />
+      <Button fx:id="modifier" layoutX="577.0" layoutY="420.0" mnemonicParsing="false" onAction="#Edit" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: #00FFFF;" text="Modifier">
+         <font>
+            <Font size="25.0" />
+         </font></Button>
+      <Button fx:id="supprimer" layoutX="577.0" layoutY="486.0" mnemonicParsing="false" onAction="#delete" prefHeight="47.0" prefWidth="187.0" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="Arial Unicode MS" size="27.0" />
+         </font></Button>
+      <TextField fx:id="textid" layoutX="577.0" layoutY="329.0" />
+      <TextField fx:id="textnom" layoutX="577.0" layoutY="375.0" />
+      <Button layoutX="385.0" layoutY="195.0" mnemonicParsing="false" onAction="#readmy" text="rechercher" />
+      <Button fx:id="reservation" layoutX="213.0" layoutY="467.0" mnemonicParsing="false" onAction="#MYreservation" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: EFF515;" text="Ajouter au panier" />
+      <Button layoutX="525.0" layoutY="191.0" mnemonicParsing="false" onAction="#stat" prefHeight="39.0" prefWidth="105.0" style="-fx-background-color: #24eea8;" text="Statistique" />
+      <Button fx:id="actualiser" layoutX="27.0" layoutY="195.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="157.0" style="-fx-background-color: #24eea8;" text="Actualiser" />
+      <Button fx:id="calendrier" layoutX="645.0" layoutY="191.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" style="-fx-background-color: #24eea8;" text="Calendrier" />
+      <Button fx:id="calcul" layoutX="577.0" layoutY="251.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="178.0" style="-fx-background-color: #24eea8;" text="Calculatrice" />
+      <Pane layoutY="89.0" prefHeight="16.0" prefWidth="775.0" style="-fx-background-color: BLACK;" />
+      <FontAwesomeIcon glyphName="BACKWARD" layoutX="49.0" layoutY="165.0" size="3em" wrappingWidth="26.928571701049805" />
+      <Text fx:id="retour" layoutX="101.0" layoutY="160.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -31,6 +31,8 @@ public class AccueilFormAideController implements Initializable {
     private Button add_form;
     @FXML
     private Button display_form;
+    @FXML
+    private Button MyReservation;
 
     /**
      * Initializes the controller class.
@@ -38,7 +40,18 @@ public class AccueilFormAideController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        
+           MyReservation.setOnAction(event -> {
+
+            try {
+                Parent page1 = FXMLLoader.load(getClass().getResource("/com/esprit/view/MyReservation.fxml"));
+                Scene scene = new Scene(page1);
+                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                stage.setScene(scene);
+                stage.show();
+            } catch (IOException ex) {
+                Logger.getLogger(AccueilPublicationController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        });
               add_form.setOnAction(event -> {
 
             try {
@@ -68,16 +81,15 @@ public class AccueilFormAideController implements Initializable {
     }    
 
     @FXML
-    private void back(MouseEvent event) {
-            try {
-               Parent page3 = FXMLLoader.load(getClass().getResource("/com/esprit/view/Acueill.fxml"));
-               Scene scene = new Scene(page3);
-               Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-               stage.setScene(scene);
-               stage.show();
-           } catch (IOException ex) {
-               Logger.getLogger(AccueilPublicationController.class.getName()).log(Level.SEVERE, null, ex);
-           }
+    private void back(MouseEvent event) throws IOException {
+       
+            Parent page   = FXMLLoader.load(getClass().getResource("/roua/view/Home.fxml"));
+            Scene scene = new Scene(page );
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+            
+       
     }
     
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="roua.view.LoginController">
+
+   <children>
+      <ImageView fitHeight="445.0" fitWidth="678.0" layoutX="103.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../com/esprit/image/back.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtUsername" layoutX="288.0" layoutY="74.0" prefHeight="26.0" prefWidth="269.0" promptText="nom ou email" />
+      <Button fx:id="btnSignin" layoutX="288.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="269.0" text="Connexion" />
+      <Text fx:id="btnforgetpass" fill="#ff7e7e" fontSmoothingType="LCD" layoutX="354.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe oublié ? " wrappingWidth="137.61111111111111" />
+      <Button fx:id="btnFB" layoutX="329.0" layoutY="294.0" mnemonicParsing="false" text="Se conecter avec Facebook ?" />
+      <Label fx:id="lb1_close" contentDisplay="CENTER" graphicTextGap="10.0" layoutX="556.0" layoutY="14.0" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="68.0" text="         X" textAlignment="CENTER" />
+      <Text fx:id="lb1Errors" fill="#ff7e7e" fontSmoothingType="LCD" layoutX="314.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="217.61111111111111" />
+   <PasswordField fx:id="txtPassword" layoutX="284.0" layoutY="139.0" prefHeight="32.0" prefWidth="269.0" promptText="mot de passe" />
+      <ImageView fitHeight="61.0" fitWidth="121.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../com/esprit/image/logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="74.0" layoutY="105.0" onMouseClicked="#back" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour" wrappingWidth="94.82470703125">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon glyphName="BACKWARD" layoutX="40.0" layoutY="107.0" size="2em" />
+   </children>
+</AnchorPane>

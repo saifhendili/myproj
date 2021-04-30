@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 package com.esprit.service;
-
+import com.esprit.utils.MyDb;
 import com.esprit.entity.Likes;
 import com.esprit.entity.Personne;
-import com.esprit.utils.MyDb;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
